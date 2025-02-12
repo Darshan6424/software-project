@@ -37,9 +37,55 @@
             "name":"C programming",
             "snippets":[
                 {
-                    "title":"Write a program to read and write from a file using getw() and putw() function. (Pratik GC)",
+                    "title":"Write a program to read and write from a file using getw() and putw() function.",
                     "code":"#include<stdio.h>\n#include<stdlib.h>\nint main()\n{\nFILE *fp;\nint a;\nfp=fopen(\"D:/doingright.txt\",\"w\");\nprintf(\"enter the number to input in the file\");\nscanf(\"%d\",&a);\nputw(a,fp);\nfclose(fp);\nfp=fopen(\"D:/doingright.txt\",\"r\");\nint n=getw(fp);\nprintf(\"The integer read from file is %d\",n);\nfclose(fp);\n}",
-                    "outpuImage":"./assets/image7.PNG",
+                    "outpuImage":"./assets/image7.png",
+                    "fileImage":""
+                },
+                {
+            "name":"C programming",
+            "snippets":[
+                {
+                    "title":"Write a C program to find the maximum and minimum element from an array.",
+                    "code":"#include<stdio.h>
+
+int main() {
+    int n, i;
+    
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    
+    int array[n]; // Defining the array
+    
+    printf("Enter the elements of the array: \n");
+    
+    // To enter the elements of the array
+    for(i = 0; i < n; i++) {  // Start at 0, not 1
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &array[i]);  // No need for \n after %d
+    }
+    
+    // Initialize max and min to the first element
+    int max = array[0];
+    int min = array[0];
+    
+    // Find the maximum and minimum values in the array
+    for(i = 1; i < n; i++) {  // Start from 1 since we already used array[0] for max and min
+        if(array[i] > max) {
+            max = array[i];  // Update max
+        }
+        if(array[i] < min) {
+            min = array[i];  // Update min
+        }
+    }
+    
+    printf("The maximum value of the array is %d\n", max);
+    printf("The minimum value of the array is %d\n", min);
+    
+    return 0;
+}
+ ",
+                    "outpuImage":"./assets/image7.png",
                     "fileImage":""
                 }
             ]
