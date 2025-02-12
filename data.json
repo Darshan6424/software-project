@@ -32,8 +32,8 @@
             "name":"C programmin",
             "snippets":[
                 {
-                    "title":"",
-                    "code":"",
+                    "title":"16. Write a program using user-defined function to find the smallest among 3 numbers.",
+                    "code": "#include<stdio.h>\n\nint small(int a, int b, int c);\n\nint main(){\n    int a, b, c, s;\n    printf(\"Enter any 3 number::\");\n    scanf(\"%d%d%d\", &a, &b, &c);\n    s = small(a, b, c);\n    printf(\"The smallest number among 3 numbers is %d\", s);\n    printf(\"The code was executed by 023neb716\");\n}\n\nint small(int a, int b, int c){\n    if(a < b && a < c){\n        return a;\n    }\n    else if(b < a && b < c){\n        return b;\n    }\n    else if(c < a && c < b){\n        return c;\n    }\n    else{\n        printf(\"Please don't enter equal numbers\");\n    }\n}"
                     "outpuImage":"",
                     "fileImage":""
                 }
