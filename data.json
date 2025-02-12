@@ -36,7 +36,14 @@
                     "code":"#include<stdio.h>\n#include<stdlib.h>\nint main()\n{\nFILE *fp;\nint a;\nfp=fopen(\"D:/doingright.txt\",\"w\");\nprintf(\"enter the number to input in the file\");\nscanf(\"%d\",&a);\nputw(a,fp);\nfclose(fp);\nfp=fopen(\"D:/doingright.txt\",\"r\");\nint n=getw(fp);\nprintf(\"The integer read from file is %d\",n);\nfclose(fp);\n}",
                     "outpuImage":"./assets/image7.png",
                     "fileImage":""
-                }
+                },
+                {
+                    "title": "Write a program using user-defined function to find the sum of N odd numbers.  BY ANKIT ADHIKARI(725)",
+                    "code": "#include <stdio.h>    int sum_of_odd_numbers(int n) {    /** Function to calculate the sum of the first N odd numbers. **/     int sum_odd = 0;    for (int i = 0; i < n; i++) {    int odd_number = 2 * i + 1;  // Calculate the ith odd number    sum_odd += odd_number;        // Add it to the sum    }    return sum_odd;    }    int main() {    // Input: Number of odd numbers to sum    int N;    printf(\"Enter the number of odd numbers to sum: \");    scanf(\"%d\", &N);    int result = sum_of_odd_numbers(N);    printf(\"The sum of the first %d odd numbers is: %d\n\", N, result);    return 0;    }",
+                    "outputImage":"",
+                    
+                },
+                
             ]
         }
     ]
